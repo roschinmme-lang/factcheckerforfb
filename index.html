@@ -1,139 +1,490 @@
-🔍 FactCheck
-Go back to top Features Pricing Creators Login Sign Up
-v1.0 Powered by Pixtral
-The End of
-Social Deception.
-Deploying cutting-edge vision models to protect your feed from deepfakes and misinformation.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FB Fact Checker | Advanced AI Verification</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glow-bg"></div>
+    <nav class="navbar">
+        <div class="logo">🔍 <span>Fact</span>Check</div>
+        <div class="nav-links">
+            <a href="#" class="nav-cta">Go back to top</a>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#team">Creators</a>
+            <a href="#" class="nav-login" id="openLoginBtn">Login</a>
+            <a href="#" class="nav-signup" id="openSignupBtn">Sign Up</a>
+        </div>
+    </nav>
 
-Get Started — Free Download ZIP
-● ● ●
-TRUE
-Scanning complete. Content verified by Mistral AI.
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="badge">v1.0 Powered by Pixtral</div>
+            <h1>The End of <br><span class="highlight">Social Deception.</span></h1>
+            <p>Deploying cutting-edge vision models to protect your feed from deepfakes and misinformation.</p>
+            <div class="hero-btns">
+                <a href="#" class="cta-button" id="heroGetStarted">Get Started — Free</a>
+                <a href="factcheckerextensionforfb.zip" class="secondary-button" download>Download ZIP</a>
+            </div>
+        </div>
+        <div class="hero-mockup">
+            <div class="mockup-window">
+                <div class="mockup-header">● ● ●</div>
+                <div class="mockup-body">
+                    <div class="mockup-line"></div>
+                    <div class="mockup-result">
+                        <span class="badge-true">TRUE</span>
+                        <p>Scanning complete. Content verified by Mistral AI.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-Core Capabilities
-Engineered for Certainty.
-🔍
-Smart Snip Capture
-Our custom snipping tool allows you to isolate specific posts, comments, or images without leaving your Facebook tab. Precision selection ensures the AI focuses exactly on the data you want to verify.
+    <!-- FEATURES -->
+    <section id="features" class="features-suite">
+        <div class="section-header">
+            <div class="badge">Core Capabilities</div>
+            <h2>Engineered for <span class="highlight">Certainty.</span></h2>
+        </div>
+        <div class="feature-grid">
+            <div class="feature-box">
+                <div class="feature-icon">🔍</div>
+                <h3>Smart Snip Capture</h3>
+                <p>Our custom snipping tool allows you to isolate specific posts, comments, or images without leaving your Facebook tab. Precision selection ensures the AI focuses exactly on the data you want to verify.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🛡️</div>
+                <h3>Deepfake Analysis</h3>
+                <p>Leveraging Pixtral's 400M parameter vision encoder, the extension detects lighting inconsistencies and unnatural textures common in AI-generated imagery (DALL-E, Midjourney, Flux).</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">⚖️</div>
+                <h3>Contextual Fact-Checking</h3>
+                <p>Goes beyond simple "True/False." The engine cross-references claims against known data to provide a nuanced verdict: True, Misleading, or Hoax—complete with a detailed explanation.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🌙</div>
+                <h3>Adaptive UI</h3>
+                <p>Built with modern CSS variables, the interface automatically syncs with your system or Facebook's Dark Mode for a seamless, eye-friendly experience during late-night browsing.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🔒</div>
+                <h3>Privacy First</h3>
+                <p>All analysis is session-based. We don't store your history or personal data. The "X" button instantly wipes results from your screen, keeping your workspace clean and private.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">⚡</div>
+                <h3>Mistral Powered</h3>
+                <p>Direct integration with Mistral API's latest Pixtral-12B model ensures professional-grade reasoning and lightning-fast response times, typically under 2 seconds.</p>
+            </div>
+        </div>
+    </section>
 
-🛡️
-Deepfake Analysis
-Leveraging Pixtral's 400M parameter vision encoder, the extension detects lighting inconsistencies and unnatural textures common in AI-generated imagery (DALL-E, Midjourney, Flux).
+    <!-- PRICING -->
+    <section id="pricing" class="pricing-section">
+        <div class="section-header">
+            <div class="badge">Subscription Plans</div>
+            <h2>Simple, Transparent <span class="highlight">Pricing.</span></h2>
+            <p class="section-sub">Create an account first, then choose the plan that fits you.</p>
+        </div>
 
-⚖️
-Contextual Fact-Checking
-Goes beyond simple "True/False." The engine cross-references claims against known data to provide a nuanced verdict: True, Misleading, or Hoax—complete with a detailed explanation.
+        <div class="billing-toggle">
+            <button class="toggle-btn active" data-period="monthly">Monthly</button>
+            <button class="toggle-btn" data-period="semi">Semi-Annual <span class="discount-tag">10% OFF</span></button>
+            <button class="toggle-btn" data-period="annual">Annual <span class="discount-tag">20% OFF</span></button>
+        </div>
 
-🌙
-Adaptive UI
-Built with modern CSS variables, the interface automatically syncs with your system or Facebook's Dark Mode for a seamless, eye-friendly experience during late-night browsing.
+        <div class="pricing-cards">
+            <div class="pricing-card free-card">
+                <div class="plan-label">Free</div>
+                <div class="price-display">
+                    <span class="currency">₱</span>
+                    <span class="amount">0</span>
+                    <span class="period">/forever</span>
+                </div>
+                <ul class="plan-features">
+                    <li>✅ 10 scans per day</li>
+                    <li>✅ Basic fact-checking</li>
+                    <li>✅ Chrome extension access</li>
+                    <li>❌ Deepfake detection</li>
+                    <li>❌ Priority support</li>
+                </ul>
+                <a href="#" class="plan-btn plan-btn-outline" id="freeSignupBtn">Get Started Free</a>
+            </div>
 
-🔒
-Privacy First
-All analysis is session-based. We don't store your history or personal data. The "X" button instantly wipes results from your screen, keeping your workspace clean and private.
+            <div class="pricing-card pro-card featured">
+                <div class="featured-badge">⭐ Most Popular</div>
+                <div class="plan-label">Pro</div>
+                <div class="price-display" id="proPriceDisplay">
+                    <span class="currency">₱</span>
+                    <span class="amount" id="proAmount">199</span>
+                    <span class="period" id="proPeriod">/month</span>
+                </div>
+                <div class="original-price" id="proOriginal" style="display:none;"></div>
+                <ul class="plan-features">
+                    <li>✅ Unlimited scans</li>
+                    <li>✅ Advanced fact-checking</li>
+                    <li>✅ Deepfake detection</li>
+                    <li>✅ Priority AI processing</li>
+                    <li>✅ Email support</li>
+                </ul>
+                <a href="#" class="plan-btn plan-btn-primary" id="proSubscribeBtn">Subscribe Now</a>
+            </div>
+        </div>
+    </section>
 
-⚡
-Mistral Powered
-Direct integration with Mistral API's latest Pixtral-12B model ensures professional-grade reasoning and lightning-fast response times, typically under 2 seconds.
+    <!-- TEAM -->
+    <section id="team" class="team">
+        <h2 class="section-title">The Engineering Team</h2>
+        <div class="team-grid">
+            <div class="team-card"><h3>Chin</h3><p>Lead Architecture and the builder</p></div>
+            <div class="team-card"><h3>Kiko</h3><p>Interaction Design idea</p></div>
+            <div class="team-card"><h3>Jim</h3><p>Logic idea</p></div>
+            <div class="team-card"><h3>Leo</h3><p>Systems Testing</p></div>
+        </div>
+    </section>
 
-Subscription Plans
-Simple, Transparent Pricing.
-Create an account first, then choose the plan that fits you.
+    <!-- HOW TO INSTALL -->
+    <section style="padding: 50px 10%; background: rgba(255,255,255,0.02); text-align: center;">
+        <h3>How to Install</h3>
+        <p style="opacity: 0.7; max-width: 600px; margin: 10px auto;">
+            1. Download the ZIP <br>
+            2. Unzip the folder <br>
+            3. Open <b>chrome://extensions</b> <br>
+            4. Enable <b>Developer Mode</b> <br>
+            5. Click <b>Load Unpacked</b> and select the folder.<br>
+            6. When you open the Facebook page <b>click the puzzle button at the top right</b> and click the FactChecker extension.
+        </p>
+    </section>
 
-Monthly Semi-Annual 10% OFF Annual 20% OFF
-Free
-₱ 0 /forever
-✅ 10 scans per day
-✅ Basic fact-checking
-✅ Chrome extension access
-❌ Deepfake detection
-❌ Priority support
-Get Started Free
-⭐ Most Popular
-Pro
-₱ 199 /month
-✅ Unlimited scans
-✅ Advanced fact-checking
-✅ Deepfake detection
-✅ Priority AI processing
-✅ Email support
-Subscribe Now
-The Engineering Team
-Chin
-Lead Architecture and the builder
+    <footer>
+        <p>Created by STI College 2nd year BSIT Tertiary Students © 2026</p>
+    </footer>
 
-Kiko
-Interaction Design idea
+    <!-- ===================== MODALS ===================== -->
 
-Jim
-Logic idea
+    <!-- BACKDROP -->
+    <div class="modal-backdrop" id="modalBackdrop"></div>
 
-Leo
-Systems Testing
+    <!-- SIGN UP MODAL -->
+    <div class="modal" id="signupModal">
+        <button class="modal-close" id="closeSignup">✕</button>
+        <div class="modal-icon">🔍</div>
+        <h2 class="modal-title">Create Account</h2>
+        <p class="modal-sub">Join FactCheck and protect your feed.</p>
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="signupName" placeholder="Juan dela Cruz" />
+        </div>
+        <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="signupEmail" placeholder="juan@email.com" />
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="signupPassword" placeholder="Min. 8 characters" />
+        </div>
+        <div class="form-group">
+            <label>Confirm Password</label>
+            <input type="password" id="signupConfirm" placeholder="Repeat password" />
+        </div>
+        <button class="modal-btn" id="signupSubmit">Create Account</button>
+        <p class="modal-footer-text">Already have an account? <a href="#" id="switchToLogin">Log in here</a></p>
+    </div>
 
-How to Install
-1. Download the ZIP
-2. Unzip the folder
-3. Open chrome://extensions
-4. Enable Developer Mode
-5. Click Load Unpacked and select the folder.
-6. When you open the Facebook page click the puzzle button at the top right and click the FactChecker extension.
+    <!-- LOGIN MODAL -->
+    <div class="modal" id="loginModal">
+        <button class="modal-close" id="closeLogin">✕</button>
+        <div class="modal-icon">🔐</div>
+        <h2 class="modal-title">Welcome Back</h2>
+        <p class="modal-sub">Sign in to your FactCheck account.</p>
+        <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="loginEmail" placeholder="juan@email.com" />
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="loginPassword" placeholder="Your password" />
+        </div>
+        <button class="modal-btn" id="loginSubmit">Log In</button>
+        <p class="modal-footer-text">No account yet? <a href="#" id="switchToSignup">Sign up for free</a></p>
+    </div>
 
-Created by STI College 2nd year BSIT Tertiary Students © 2026
+    <!-- BILLING MODAL -->
+    <div class="modal billing-modal" id="billingModal">
+        <button class="modal-close" id="closeBilling">✕</button>
+        <div class="modal-icon">💳</div>
+        <h2 class="modal-title">Complete Subscription</h2>
+        <div class="billing-summary" id="billingSummary">
+            <span id="billingPlanName">Pro — Monthly</span>
+            <span id="billingPlanPrice">₱199.00</span>
+        </div>
 
-✕
-🔍
-Create Account
-Join FactCheck and protect your feed.
+        <p class="modal-sub" style="margin-bottom:15px;">Select Payment Method</p>
+        <div class="payment-methods">
+            <div class="payment-opt" data-method="gcash" id="gcashOpt">
+                <span class="pay-icon">📱</span>
+                <span>GCash</span>
+            </div>
+            <div class="payment-opt" data-method="paypal" id="paypalOpt">
+                <span class="pay-icon">🅿️</span>
+                <span>PayPal</span>
+            </div>
+            <div class="payment-opt" data-method="card" id="cardOpt">
+                <span class="pay-icon">💳</span>
+                <span>Credit / Debit Card</span>
+            </div>
+        </div>
 
-Full Name 
-Juan dela Cruz
-Email Address 
-juan@email.com
-Password 
-Min. 8 characters
-Confirm Password 
-Repeat password
-Create Account
-Already have an account? Log in here
+        <!-- GCash Form -->
+        <div class="payment-form" id="gcashForm">
+            <div class="form-group">
+                <label>GCash Mobile Number</label>
+                <input type="tel" placeholder="09XXXXXXXXX" maxlength="11"/>
+            </div>
+            <div class="form-group">
+                <label>Account Name</label>
+                <input type="text" placeholder="Full name on GCash"/>
+            </div>
+        </div>
 
-✕
-🔐
-Welcome Back
-Sign in to your FactCheck account.
+        <!-- PayPal Form -->
+        <div class="payment-form" id="paypalForm">
+            <div class="form-group">
+                <label>PayPal Email</label>
+                <input type="email" placeholder="paypal@email.com"/>
+            </div>
+        </div>
 
-Email Address 
-juan@email.com
-Password 
-Your password
-Log In
-No account yet? Sign up for free
+        <!-- Card Form -->
+        <div class="payment-form" id="cardForm">
+            <div class="form-group">
+                <label>Cardholder Name</label>
+                <input type="text" placeholder="Name on card"/>
+            </div>
+            <div class="form-group">
+                <label>Card Number</label>
+                <input type="text" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" id="cardNumInput"/>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Expiry Date</label>
+                    <input type="text" placeholder="MM/YY" maxlength="5" id="cardExpiry"/>
+                </div>
+                <div class="form-group">
+                    <label>CVV</label>
+                    <input type="text" placeholder="•••" maxlength="3"/>
+                </div>
+            </div>
+        </div>
 
-✕
-💳
-Complete Subscription
-Pro — Monthly ₱199.00
-Select Payment Method
+        <button class="modal-btn" id="payNowBtn" style="display:none;">Pay Now</button>
+    </div>
 
-📱 GCash
-🅿️ PayPal
-💳 Credit / Debit Card
-GCash Mobile Number 
-09XXXXXXXXX
-Account Name 
-Full name on GCash
-PayPal Email 
-paypal@email.com
-Cardholder Name 
-Name on card
-Card Number 
-XXXX XXXX XXXX XXXX
-Expiry Date 
-MM/YY
-CVV 
-•••
-🎉
-Payment Successful!
-Your Pro subscription is now active.
+    <!-- SUCCESS MODAL -->
+    <div class="modal success-modal" id="successModal">
+        <div class="success-icon">🎉</div>
+        <h2 class="modal-title">Payment Successful!</h2>
+        <p class="modal-sub" id="successMessage">Your Pro subscription is now active.</p>
+        <div class="success-details" id="successDetails"></div>
+        <button class="modal-btn" id="successClose">Start Using FactCheck</button>
+    </div>
 
-Start Using FactCheck
+    <script>
+    // ===================== STATE =====================
+    let currentUser = null;
+    let selectedPeriod = 'monthly';
+    let selectedMethod = null;
+    const BASE_PRICE = 199;
+
+    const pricing = {
+        monthly:  { label: 'Monthly',       divisor: 1,  multiplier: 1,    suffix: '/month',  discount: 0 },
+        semi:     { label: 'Semi-Annual',    divisor: 1,  multiplier: 6,    suffix: '/6 months', discount: 0.10 },
+        annual:   { label: 'Annual',         divisor: 1,  multiplier: 12,   suffix: '/year',   discount: 0.20 },
+    };
+
+    function getTotal(period) {
+        const p = pricing[period];
+        const gross = BASE_PRICE * p.multiplier;
+        return Math.round(gross * (1 - p.discount));
+    }
+
+    // ===================== MODAL HELPERS =====================
+    const backdrop = document.getElementById('modalBackdrop');
+    function openModal(id) {
+        closeAllModals();
+        document.getElementById(id).classList.add('active');
+        backdrop.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeAllModals() {
+        document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
+        backdrop.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    backdrop.addEventListener('click', closeAllModals);
+
+    // ===================== NAVBAR BUTTONS =====================
+    document.getElementById('openLoginBtn').addEventListener('click', e => { e.preventDefault(); openModal('loginModal'); });
+    document.getElementById('openSignupBtn').addEventListener('click', e => { e.preventDefault(); openModal('signupModal'); });
+    document.getElementById('heroGetStarted').addEventListener('click', e => { e.preventDefault(); openModal('signupModal'); });
+    document.getElementById('freeSignupBtn').addEventListener('click', e => { e.preventDefault(); openModal('signupModal'); });
+    document.getElementById('closeSignup').addEventListener('click', closeAllModals);
+    document.getElementById('closeLogin').addEventListener('click', closeAllModals);
+    document.getElementById('closeBilling').addEventListener('click', closeAllModals);
+    document.getElementById('successClose').addEventListener('click', closeAllModals);
+
+    // Switch between login & signup
+    document.getElementById('switchToLogin').addEventListener('click', e => { e.preventDefault(); openModal('loginModal'); });
+    document.getElementById('switchToSignup').addEventListener('click', e => { e.preventDefault(); openModal('signupModal'); });
+
+    // ===================== SIGN UP =====================
+    document.getElementById('signupSubmit').addEventListener('click', () => {
+        const name = document.getElementById('signupName').value.trim();
+        const email = document.getElementById('signupEmail').value.trim();
+        const pass = document.getElementById('signupPassword').value;
+        const conf = document.getElementById('signupConfirm').value;
+
+        if (!name || !email || !pass || !conf) { showFormMsg('signupModal', 'Please fill in all fields.', 'error'); return; }
+        if (pass.length < 8) { showFormMsg('signupModal', 'Password must be at least 8 characters.', 'error'); return; }
+        if (pass !== conf) { showFormMsg('signupModal', 'Passwords do not match.', 'error'); return; }
+
+        currentUser = { name, email };
+        updateNavForLoggedIn();
+        showFormMsg('signupModal', `✅ Account created! Welcome, ${name}!`, 'success');
+        setTimeout(closeAllModals, 1500);
+    });
+
+    // ===================== LOGIN =====================
+    document.getElementById('loginSubmit').addEventListener('click', () => {
+        const email = document.getElementById('loginEmail').value.trim();
+        const pass = document.getElementById('loginPassword').value;
+
+        if (!email || !pass) { showFormMsg('loginModal', 'Please enter email and password.', 'error'); return; }
+
+        // Prototype: accept any credentials
+        currentUser = { name: email.split('@')[0], email };
+        updateNavForLoggedIn();
+        showFormMsg('loginModal', `✅ Logged in! Welcome back.`, 'success');
+        setTimeout(closeAllModals, 1400);
+    });
+
+    function updateNavForLoggedIn() {
+        document.getElementById('openLoginBtn').style.display = 'none';
+        document.getElementById('openSignupBtn').textContent = '👤 ' + (currentUser.name || 'Account');
+        document.getElementById('openSignupBtn').style.background = 'rgba(8,102,255,0.2)';
+        document.getElementById('openSignupBtn').removeEventListener('click', () => {});
+    }
+
+    // ===================== PRICING TOGGLE =====================
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            selectedPeriod = btn.dataset.period;
+            updatePriceDisplay();
+        });
+    });
+
+    function updatePriceDisplay() {
+        const p = pricing[selectedPeriod];
+        const total = getTotal(selectedPeriod);
+        const gross = BASE_PRICE * p.multiplier;
+
+        document.getElementById('proAmount').textContent = total.toLocaleString();
+        document.getElementById('proPeriod').textContent = p.suffix;
+
+        const origEl = document.getElementById('proOriginal');
+        if (p.discount > 0) {
+            origEl.style.display = 'block';
+            origEl.textContent = `Was ₱${gross.toLocaleString()} — Save ${p.discount * 100}%`;
+        } else {
+            origEl.style.display = 'none';
+        }
+    }
+
+    // ===================== SUBSCRIBE BUTTON =====================
+    document.getElementById('proSubscribeBtn').addEventListener('click', e => {
+        e.preventDefault();
+        if (!currentUser) {
+            openModal('signupModal');
+            showFormMsg('signupModal', '⚠️ Please create an account first to subscribe.', 'error');
+            return;
+        }
+        openBillingModal();
+    });
+
+    function openBillingModal() {
+        const p = pricing[selectedPeriod];
+        const total = getTotal(selectedPeriod);
+        document.getElementById('billingPlanName').textContent = `Pro — ${p.label}`;
+        document.getElementById('billingPlanPrice').textContent = `₱${total.toLocaleString()}.00`;
+        selectedMethod = null;
+        document.querySelectorAll('.payment-opt').forEach(o => o.classList.remove('active'));
+        document.querySelectorAll('.payment-form').forEach(f => f.classList.remove('active'));
+        document.getElementById('payNowBtn').style.display = 'none';
+        openModal('billingModal');
+    }
+
+    // ===================== PAYMENT METHOD SELECTION =====================
+    document.querySelectorAll('.payment-opt').forEach(opt => {
+        opt.addEventListener('click', () => {
+            document.querySelectorAll('.payment-opt').forEach(o => o.classList.remove('active'));
+            document.querySelectorAll('.payment-form').forEach(f => f.classList.remove('active'));
+            opt.classList.add('active');
+            selectedMethod = opt.dataset.method;
+            document.getElementById(selectedMethod + 'Form').classList.add('active');
+            document.getElementById('payNowBtn').style.display = 'block';
+        });
+    });
+
+    // ===================== CARD NUMBER FORMATTING =====================
+    document.getElementById('cardNumInput').addEventListener('input', function() {
+        let v = this.value.replace(/\D/g, '').substring(0, 16);
+        this.value = v.replace(/(.{4})/g, '$1 ').trim();
+    });
+    document.getElementById('cardExpiry').addEventListener('input', function() {
+        let v = this.value.replace(/\D/g, '').substring(0, 4);
+        if (v.length > 2) v = v.substring(0, 2) + '/' + v.substring(2);
+        this.value = v;
+    });
+
+    // ===================== PAY NOW =====================
+    document.getElementById('payNowBtn').addEventListener('click', () => {
+        const p = pricing[selectedPeriod];
+        const total = getTotal(selectedPeriod);
+        const methodLabels = { gcash: 'GCash', paypal: 'PayPal', card: 'Credit/Debit Card' };
+
+        document.getElementById('successMessage').textContent = `Your Pro ${p.label} subscription is now active!`;
+        document.getElementById('successDetails').innerHTML = `
+            <div class="success-row"><span>Plan</span><span>Pro ${p.label}</span></div>
+            <div class="success-row"><span>Amount Paid</span><span>₱${total.toLocaleString()}.00</span></div>
+            <div class="success-row"><span>Payment via</span><span>${methodLabels[selectedMethod]}</span></div>
+            <div class="success-row"><span>Account</span><span>${currentUser.email}</span></div>
+        `;
+        openModal('successModal');
+    });
+
+    // ===================== FORM MESSAGE HELPER =====================
+    function showFormMsg(modalId, msg, type) {
+        const modal = document.getElementById(modalId);
+        let el = modal.querySelector('.form-msg');
+        if (!el) { el = document.createElement('p'); el.className = 'form-msg'; modal.querySelector('.modal-btn').before(el); }
+        el.textContent = msg;
+        el.className = `form-msg ${type}`;
+    }
+
+    // ===================== SCROLL ANIMATION =====================
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('show'); });
+    });
+    document.querySelectorAll('section, .team-card').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
