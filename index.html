@@ -42,7 +42,6 @@
             </div>
         </div>
     </header>
-
     <!-- FEATURES -->
     <section id="features" class="features-suite">
         <div class="section-header">
@@ -82,19 +81,35 @@
             </div>
         </div>
     </section>
-
-    
-    <!-- TEAM -->
-    <section id="team" class="team">
-        <h2 class="section-title">The Engineering Team</h2>
-        <div class="team-grid">
-            <div class="team-card"><h3>Chin</h3><p>Lead Architecture and the builder</p></div>
-            <div class="team-card"><h3>Kiko</h3><p>Interaction Design idea</p></div>
-            <div class="team-card"><h3>Jim</h3><p>Logic idea</p></div>
-            <div class="team-card"><h3>Leo</h3><p>Systems Testing</p></div>
+    <!-- FEATURES -->
+    <section id="features" class="features-suite">
+        <div class="section-header">
+            <div class="badge">Core Capabilities</div>
+            <h2>the persons behind <span class="highlight">the project.</span></h2>
+        </div>
+        <div class="feature-grid">
+            <div class="feature-box">
+                <div class="feature-icon">Kiko</div>
+                <h3>tester</h3>
+                <p>Tested the extension</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">Chin</div>
+                <h3>Builder and Idea</h3>
+                <p>The builder and person behind the idea</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">Leo</div>
+                <h3>Helper</h3>
+                <p>Helped the builder Build</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">Je ar</div>
+                <h3>Financer</h3>
+                <p>Finances things we need</p>
+            </div>
         </div>
     </section>
-
     <!-- HOW TO INSTALL -->
     <section style="padding: 50px 10%; background: rgba(255,255,255,0.02); text-align: center;">
         <h3>How to Install</h3>
@@ -112,182 +127,6 @@
         <p>Created by STI College 2nd year BSIT Tertiary Students © 2026</p>
     </footer>
 
-    <!-- ===================== MODALS ===================== -->
-
-    <!-- BACKDROP -->
-    <div class="modal-backdrop" id="modalBackdrop"></div>
-
     
-    // ===================== MODAL HELPERS =====================
-    const backdrop = document.getElementById('modalBackdrop');
-    function openModal(id) {
-        closeAllModals();
-        document.getElementById(id).classList.add('active');
-        backdrop.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-    function closeAllModals() {
-        document.querySelectorAll('.modal').forEach(m => m.classList.remove('active'));
-        backdrop.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-    backdrop.addEventListener('click', closeAllModals);
-
-    // ===================== NAVBAR BUTTONS =====================
-    document.getElementById('openLoginBtn').addEventListener('click', e => { e.preventDefault(); openModal('loginModal'); });
-    document.getElementById('openSignupBtn').addEventListener('click', e => { e.preventDefault(); openModal('signupModal'); });
-    document.getElementById('heroGetStarted').addEventListener('click', e => { e.preventDefault(); openModal('signupModal'); });
-    document.getElementById('freeSignupBtn').addEventListener('click', e => { e.preventDefault(); openModal('signupModal'); });
-    document.getElementById('closeSignup').addEventListener('click', closeAllModals);
-    document.getElementById('closeLogin').addEventListener('click', closeAllModals);
-    document.getElementById('closeBilling').addEventListener('click', closeAllModals);
-    document.getElementById('successClose').addEventListener('click', closeAllModals);
-
-    // Switch between login & signup
-    document.getElementById('switchToLogin').addEventListener('click', e => { e.preventDefault(); openModal('loginModal'); });
-    document.getElementById('switchToSignup').addEventListener('click', e => { e.preventDefault(); openModal('signupModal'); });
-
-    // ===================== SIGN UP =====================
-    document.getElementById('signupSubmit').addEventListener('click', () => {
-        const name = document.getElementById('signupName').value.trim();
-        const email = document.getElementById('signupEmail').value.trim();
-        const pass = document.getElementById('signupPassword').value;
-        const conf = document.getElementById('signupConfirm').value;
-
-        if (!name || !email || !pass || !conf) { showFormMsg('signupModal', 'Please fill in all fields.', 'error'); return; }
-        if (pass.length < 8) { showFormMsg('signupModal', 'Password must be at least 8 characters.', 'error'); return; }
-        if (pass !== conf) { showFormMsg('signupModal', 'Passwords do not match.', 'error'); return; }
-
-        currentUser = { name, email };
-        updateNavForLoggedIn();
-        showFormMsg('signupModal', `✅ Account created! Welcome, ${name}!`, 'success');
-        setTimeout(closeAllModals, 1500);
-    });
-
-    // ===================== LOGIN =====================
-    document.getElementById('loginSubmit').addEventListener('click', () => {
-        const email = document.getElementById('loginEmail').value.trim();
-        const pass = document.getElementById('loginPassword').value;
-
-        if (!email || !pass) { showFormMsg('loginModal', 'Please enter email and password.', 'error'); return; }
-
-        // Prototype: accept any credentials
-        currentUser = { name: email.split('@')[0], email };
-        updateNavForLoggedIn();
-        showFormMsg('loginModal', `✅ Logged in! Welcome back.`, 'success');
-        setTimeout(closeAllModals, 1400);
-    });
-
-    function updateNavForLoggedIn() {
-        document.getElementById('openLoginBtn').style.display = 'none';
-        document.getElementById('openSignupBtn').textContent = '👤 ' + (currentUser.name || 'Account');
-        document.getElementById('openSignupBtn').style.background = 'rgba(8,102,255,0.2)';
-        document.getElementById('openSignupBtn').removeEventListener('click', () => {});
-    }
-
-    // ===================== PRICING TOGGLE =====================
-    document.querySelectorAll('.toggle-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            selectedPeriod = btn.dataset.period;
-            updatePriceDisplay();
-        });
-    });
-
-    function updatePriceDisplay() {
-        const p = pricing[selectedPeriod];
-        const total = getTotal(selectedPeriod);
-        const gross = BASE_PRICE * p.multiplier;
-
-        document.getElementById('proAmount').textContent = total.toLocaleString();
-        document.getElementById('proPeriod').textContent = p.suffix;
-
-        const origEl = document.getElementById('proOriginal');
-        if (p.discount > 0) {
-            origEl.style.display = 'block';
-            origEl.textContent = `Was ₱${gross.toLocaleString()} — Save ${p.discount * 100}%`;
-        } else {
-            origEl.style.display = 'none';
-        }
-    }
-
-    // ===================== SUBSCRIBE BUTTON =====================
-    document.getElementById('proSubscribeBtn').addEventListener('click', e => {
-        e.preventDefault();
-        if (!currentUser) {
-            openModal('signupModal');
-            showFormMsg('signupModal', '⚠️ Please create an account first to subscribe.', 'error');
-            return;
-        }
-        openBillingModal();
-    });
-
-    function openBillingModal() {
-        const p = pricing[selectedPeriod];
-        const total = getTotal(selectedPeriod);
-        document.getElementById('billingPlanName').textContent = `Pro — ${p.label}`;
-        document.getElementById('billingPlanPrice').textContent = `₱${total.toLocaleString()}.00`;
-        selectedMethod = null;
-        document.querySelectorAll('.payment-opt').forEach(o => o.classList.remove('active'));
-        document.querySelectorAll('.payment-form').forEach(f => f.classList.remove('active'));
-        document.getElementById('payNowBtn').style.display = 'none';
-        openModal('billingModal');
-    }
-
-    // ===================== PAYMENT METHOD SELECTION =====================
-    document.querySelectorAll('.payment-opt').forEach(opt => {
-        opt.addEventListener('click', () => {
-            document.querySelectorAll('.payment-opt').forEach(o => o.classList.remove('active'));
-            document.querySelectorAll('.payment-form').forEach(f => f.classList.remove('active'));
-            opt.classList.add('active');
-            selectedMethod = opt.dataset.method;
-            document.getElementById(selectedMethod + 'Form').classList.add('active');
-            document.getElementById('payNowBtn').style.display = 'block';
-        });
-    });
-
-    // ===================== CARD NUMBER FORMATTING =====================
-    document.getElementById('cardNumInput').addEventListener('input', function() {
-        let v = this.value.replace(/\D/g, '').substring(0, 16);
-        this.value = v.replace(/(.{4})/g, '$1 ').trim();
-    });
-    document.getElementById('cardExpiry').addEventListener('input', function() {
-        let v = this.value.replace(/\D/g, '').substring(0, 4);
-        if (v.length > 2) v = v.substring(0, 2) + '/' + v.substring(2);
-        this.value = v;
-    });
-
-    // ===================== PAY NOW =====================
-    document.getElementById('payNowBtn').addEventListener('click', () => {
-        const p = pricing[selectedPeriod];
-        const total = getTotal(selectedPeriod);
-        const methodLabels = { gcash: 'GCash', paypal: 'PayPal', card: 'Credit/Debit Card' };
-
-        document.getElementById('successMessage').textContent = `Your Pro ${p.label} subscription is now active!`;
-        document.getElementById('successDetails').innerHTML = `
-            <div class="success-row"><span>Plan</span><span>Pro ${p.label}</span></div>
-            <div class="success-row"><span>Amount Paid</span><span>₱${total.toLocaleString()}.00</span></div>
-            <div class="success-row"><span>Payment via</span><span>${methodLabels[selectedMethod]}</span></div>
-            <div class="success-row"><span>Account</span><span>${currentUser.email}</span></div>
-        `;
-        openModal('successModal');
-    });
-
-    // ===================== FORM MESSAGE HELPER =====================
-    function showFormMsg(modalId, msg, type) {
-        const modal = document.getElementById(modalId);
-        let el = modal.querySelector('.form-msg');
-        if (!el) { el = document.createElement('p'); el.className = 'form-msg'; modal.querySelector('.modal-btn').before(el); }
-        el.textContent = msg;
-        el.className = `form-msg ${type}`;
-    }
-
-    // ===================== SCROLL ANIMATION =====================
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('show'); });
-    });
-    document.querySelectorAll('section, .team-card').forEach((el) => observer.observe(el));
-    </script>
 </body>
 </html>
